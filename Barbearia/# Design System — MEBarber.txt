@@ -1,0 +1,39 @@
+# Design System — MEBarber
+
+## Instruções de criação
+Crie somente o Design System deste aplicativo, com documentação e componentes de interface reutilizáveis. A implementação das páginas, regras de negócio, autenticação e banco será solicitada em outro arquivo. Use os detalhes abaixo como briefing visual. Registre a proposta em design-system.md, apresente uma prévia com dados de exemplo e explique como abri-la. Ao terminar, aguarde minha revisão. Não comece o aplicativo antes de eu aprovar o design e fornecer a documentação funcional.
+
+## Contexto do projeto
+Objetivo: Um aplicativo para donos de pequenas barbearias que garante o comparecimento dos clientes com agendamento e taxa antecipada, sem precisar parar o atendimento para responder mensagens no WhatsApp..
+Público: Donos de barbearia de 1 a 3 barbeiros. e sei que não tem esse tipo de serviço ou paga por algo que não usa por completo
+Clientes
+Equipe interna
+Administradores.
+
+## Direção visual
+Estilo: Profissional.
+Paleta: principal #414736, destaque #C5A380, fundo #32382B, texto #E6E4DC.
+Tipografia: Moderna e sem serifa. Ícones: Contorno fino; manter uma única família visual.
+Cantos: Suaves. Espaçamento: Compacta.
+Referências e marca: Ainda não tenho Logo: usar o nome MEBarber em texto, sem inventar um símbolo. Quero a sensação de barbearia clássica, com tons marcantes sem imitar nenhuma marca existente.
+https://www.instagram.com/medeirosestudiobarber?srtk=MTFoM2xyMHNKNnBpbQ%3D%3D
+Validar contraste acessível, estados de foco e leitura no celular. Ajustar combinações sem contraste e explicar o ajuste.
+
+## Orientações visuais adicionais
+Pensar primeiro no celular, com botões grandes e fáceis de tocar com uma mão. Mostrar os horários livres em uma grade simples, para escolher com um toque.
+
+## Entrega esperada
+- Defina tokens de cores, tipografia, espaçamento, raios, bordas e sombras, com nomes consistentes.
+- Especifique títulos, corpo, rótulos e mensagens auxiliares, com tamanhos e pesos.
+- Crie botões, campos, seletores personalizados, cartões, navegação, alertas, modais e skeletons.
+- Documente estados normal, hover, foco, selecionado, desabilitado, erro e carregamento.
+- Inclua exemplos visuais, comportamento responsivo e navegação por teclado.
+- Use a direção de ícones escolhida e uma família consistente.
+- Verifique contraste e explique eventuais ajustes necessários à paleta.
+- Se houver logo ou referência mencionados mas não fornecidos, solicite os arquivos antes de reproduzi-los.
+
+## Base técnica da interface
+Next.js com App Router, React, TypeScript e Tailwind CSS. Organize tokens e componentes para reutilização na próxima etapa. Não conecte serviços externos nesta entrega.
+
+## Critério de conclusão
+Apresente uma página de demonstração dos componentes e a documentação do Design System para aprovação antes de construir o aplicativo.

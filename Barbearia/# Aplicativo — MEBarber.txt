@@ -1,0 +1,95 @@
+# Aplicativo — MEBarber
+
+Construa e entregue o aplicativo web completo "MEBarber", implementando todo o escopo definido neste briefing. Execute o trabalho completo com autonomia: planeje internamente, implemente, integre, teste e corrija até finalizar. Não peça aprovação do plano, permissão para editar arquivos ou autorização para passar de uma etapa para outra. Quero ver o aplicativo somente quando estiver pronto, com a entrega final validada.
+
+## OBJETIVO
+Um aplicativo para donos de pequenas barbearias que garante o comparecimento dos clientes com agendamento e taxa antecipada, sem precisar parar o atendimento para responder mensagens no WhatsApp.
+
+## PÚBLICO
+Donos de barbearia de 1 a 3 barbeiros. e sei que não tem esse tipo de serviço ou paga por algo que não usa por completo
+Clientes
+Equipe interna
+Administradores
+
+## PÁGINAS E EXPERIÊNCIA
+1. Entrar: A pessoa cria a conta com nome, celular, e-mail, e senha e data de aniversário, entra e recupera a senha se esquecer. Depois de entrar, vai direto para a tela do seu perfil: cliente em agendar, barbeiro em Agenda do barbeiro e dono em Painel do dono.
+2. Agendar: Visualizar informações
+Criar um registro
+Pesquisar e filtrar
+O cliente escolhe o serviço, o barbeiro e o dia, vê apenas os horários livres e confirma. Ao final, aparece um resumo com serviço, barbeiro, data, horário, preço e taxa de agendamento se habilitado.
+3. Meus agendamentos: Visualizar informações
+Editar informações
+O cliente vê os próximos cortes e o histórico. Pode remarcar ou cancelar um agendamento dentro do prazo permitido.
+4. Agenda do barbeiro: Visualizar informações
+Editar informações
+Pesquisar e filtrar
+O barbeiro vê os horários do dia em ordem, com o nome do cliente e serviço. Pode trocar o dia e marcar cada atendimento como concluído ou como falta.
+5. Painel do dono: Visualizar informações
+Pesquisar e filtrar
+Editar informações
+O dono veja a agenda de todos os barbeiros, filtra por barbeiros e dia, criar um agendamento para quem ligou e acompanhar o total de atendimentos e faltas do dia
+6. Serviços e equipe: Criar um registro
+Editar informações
+O dono cadastra serviços com preço e duração, libera contas de barbeiros, define horários de trabalho e folgas de cada um e suspende acessos.
+
+## FUNCIONALIDADES
+Implementar apenas o fluxo essencial descrito no objetivo e nas páginas.
+
+## ACESSO AO APLICATIVO
+Cada pessoa cria sua própria conta.
+Toda conta nova entra como cliente., Para ser barbeiro, a pessoa cria a conta e o dono libera o perfil em serviços e equipe. A conta do dono é definida na configuração inicial do aplicativo.
+
+## PERMISSÕES E PRIVACIDADE
+Cada pessoa vê apenas seus próprios dados.
+Administradores criam e editam conteúdos.
+Administradores liberam ou suspendem acessos.
+Cliente: agenda e vê apenas os próprios agendamentos.
+Barbeiros: vê apenas a própria agenda e registra conclusão ou falta.
+Dono: vê todas as agendas e gerencia serviços, preços horários e equipe
+
+## REGRAS DE NEGÓCIO
+Exigir preenchimento dos campos essenciais.
+Pedir confirmação antes de excluir.
+Um barbeiro só pode ter um agendamento por horário. Se dois clientes tentarem o mesmo horário ao mesmo tempo, só  o primeiro é confirmado.
+A agenda só mostra horário dentro do expediente do barbeiro e que comportem a duração do serviço.
+Se o estabelecimento não tiver a prática de taxa, o cliente pode cancelar ou remarcar até 2 horas antes do horário. caso tenha, ai só poderá reagendar ou desmarcar com o tempo estipulado pelo estabelecimento.
+É possível agendar com até 30 dias de antecedência.
+O pagamento é feito no estabelecimento : o aplicativo não cobra nada nessa versão
+
+## STACK
+Next.js com App Router, React, TypeScript e Tailwind CSS. Banco de dados: Firebase Authentication + Firestore. Modele entidades e relacionamentos de acordo com o briefing; aplique regras de acesso no servidor. Código versionado no GitHub e preparado para publicação na Vercel. Use versões estáveis compatíveis entre si.
+
+## DESIGN SYSTEM DE REFERÊNCIA
+Antes de construir a interface, examine a pasta do projeto e localize o Design System e a logo existentes. Procure a documentação visual (por exemplo, design-system.md, arquivos de design, tokens, estilos e componentes) e os arquivos de marca nas pastas public, assets, images e demais diretórios pertinentes; considere também os anexos desta conversa. Use o Design System encontrado como fonte principal para cores, tipografia, espaçamentos, componentes e estados. Use os arquivos originais da logo nos locais adequados, preservando proporções, cores, transparência e área de respiro; respeite as variantes para fundos claros e escuros. Não recrie a logo, não a substitua por texto ou ícones genéricos e não invente outra identidade visual quando os arquivos já estiverem disponíveis. Se houver variantes, escolha a compatível com o contexto e documente a decisão. Só adote uma base visual provisória se não existir Design System após essa busca; se a logo estiver ausente, não invente uma marca. Registre qualquer ausência real na entrega final e avance nas partes independentes sem pedir novamente arquivos que já estão na pasta.
+
+## MINHAS ORIENTAÇÕES
+A primeira versão deve ter apenas a agenda de horários disponíveis do barbeiro e o fluxo para o cliente escolher o serviço, pagar a taxa e receber a confirmação. Ficam totalmente de fora o controle de estoque, relatórios financeiros detalhados, cálculo de comissão e cadastro de produtos. O único objetivo é fazer um agendamento acontecer de ponta a ponta sem intervenção manual no WhatsApp.
+Priorizar uma primeira versão simples.
+Deixar pagamentos para uma próxima versão.
+Usar linguagem simples em português do Brasil.
+Essa primeira versão atende uma única barbearia. Deixar para depois: lembretes por whatsapp, programa de fidelidade e uso por várias barbearias na mesma conta e também o banco de dados eu costumo usar o Supabase.
+
+## PLANO DE IMPLEMENTAÇÃO
+1. Analise o briefing e o Design System aprovado. Identifique requisitos, entidades, fluxos, integrações e dependências. Resolva detalhes de implementação por conta própria e registre as suposições. Pergunte somente quando uma informação indispensável não puder ser inferida e impedir a continuidade.
+2. Registre internamente um plano completo: arquitetura, mapa de páginas e navegação, modelo de dados, autenticação, permissões, integrações e estratégia de testes. Execute esse plano imediatamente, sem submetê-lo à minha aprovação.
+3. Crie um backlog que cubra todo o escopo. Divida-o em épicos e histórias de usuário com identificadores únicos. Para cada história, escreva: “Como [perfil], quero [ação], para [benefício]”, critérios de aceitação verificáveis, dependências e tarefas técnicas.
+4. Organize as histórias em sprints ordenadas por dependência. Defina objetivo, histórias e resultado demonstrável de cada sprint. Não invente prazos ou estimativas sem contexto.
+
+## EXECUÇÃO AUTÔNOMA ATÉ A ENTREGA
+- Esta solicitação autoriza a implementação completa do escopo, incluindo criação e edição de arquivos, instalação das dependências necessárias, execução local, testes e correções.
+- Trabalhe continuamente até concluir todas as histórias. Não pare após planejamento, protótipo, primeira tela ou conclusão de uma etapa. Não peça que eu revise telas ou acompanhe prévias durante a construção.
+- Conecte autenticação, banco de dados, permissões e integrações previstas usando os acessos disponíveis. Dados fictícios servem somente para testes identificados; não apresente login, gravação ou integração simulados como funcionamento real.
+- Tome decisões técnicas e visuais compatíveis com o briefing e o Design System. Revise você mesmo o resultado e corrija os problemas encontrados.
+- Se faltar credencial, serviço ou informação indispensável, conclua primeiro tudo que não depende disso e faça uma única solicitação objetiva reunindo os bloqueios reais. Não invente acessos, não exponha segredos e não contorne controles de segurança. Compras e operações destrutivas fora do escopo exigem autorização específica.
+- Mantenha PROGRESSO.md com histórias e tarefas: [ ] pendente e [x] concluído somente após conferir os critérios de aceite. Registre testes e bloqueios reais.
+- Execute build, testes funcionais e verificações de responsividade em celular, tablet e computador; corrija as falhas antes da entrega. Quando a publicação estiver no escopo e houver acesso à hospedagem, publique e verifique o endereço final. Caso contrário, entregue a versão executável e informe exatamente o que falta para publicar.
+
+## CRITÉRIOS DE ENTREGA
+1. Todas as histórias do escopo implementadas e validadas; nenhuma funcionalidade removida silenciosamente.
+2. Aplicativo funcional com todas as páginas, subpáginas previstas, navegação e fluxos completos.
+3. Dados persistentes quando previstos, autenticação real e isolamento de dados conforme as permissões do briefing, aplicadas no servidor ou nas regras do banco.
+4. Validação de formulários, carregamento, erros, estados vazios e feedback das ações.
+5. Interface fiel ao Design System aprovado, acessível por teclado e adaptada ao celular.
+6. Segredos protegidos; .env.example sem credenciais e README com configuração, execução e publicação.
+7. Build e testes relevantes executados. Relate os resultados reais e qualquer limitação remanescente.
+8. Apresente o resultado somente ao final: aplicativo pronto para usar, link de acesso ou instruções de execução, funcionalidades entregues e resultados reais dos testes. Não encerre com um plano, prévia parcial ou promessa de continuar. Só declare a entrega concluída quando não houver trabalho obrigatório pendente; bloqueios externos devem ser informados com clareza.
